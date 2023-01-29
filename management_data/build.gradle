@@ -1,0 +1,45 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.0.2'
+	id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	compileOnly 'org.projectlombok:lombok'
+	// use mariadb connector
+//	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
+	//use mysql
+	implementation("mysql:mysql-connector-java")
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	// use jpa
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	// annotation processor
+	annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
+	// shardingsphere
+//	implementation 'org.apache.shardingsphere:sharding-jdbc-core:4.1.1'{
+//		exclude group: "org.apache", module: 'antlr-runtime'
+//	}
+	implementation 'org.apache.shardingsphere:sharding-jdbc-core:4.1.1'
+//	implementation 'com.dangdang:sharding-jdbc-core:1.5.4.1'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
