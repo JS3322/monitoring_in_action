@@ -1,9 +1,13 @@
 version: '2'
 
 services:
+  # service name : zookeeper
   zookeeper:
+    # todo) cp-zookeeper version check
     image: confluentinc/cp-zookeeper:latest
+    # setup env
     environment:
+      # single id
       ZOOKEEPER_SERVER_ID: 1
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
@@ -12,8 +16,11 @@ services:
     ports:
       - "22181:2181"
 
+  # service name : kafka
   kafka:
+    # todo) cp-cp-kafka version check
     image: confluentinc/cp-kafka:latest
+    # zookeeper container after play
     depends_on:
       - zookeeper
     ports:

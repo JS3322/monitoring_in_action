@@ -31,3 +31,19 @@
 
 ### used skill
 - sharding : org.apache.shardingsphere:sharding-jdbc-core:4.1.1'
+
+### default setup
+- docker swarm init
+- docker network rm ingress
+- docker network create --ingress --driver overlay --opt encrypted --subnet 10.10.0.0./16 ingress
+- docker network create --subnet 10.11.0.0/16 --driver overlay --scope swarm --opt encrypted --attachable cloud-edge
+- docker network create --subnet 10.12.0.0/16 --driver overlay --scope swarm --opt encrypted --attachable cloud-socket-proxy
+- docker network create --subnet 10.13.0.0/16 --driver overlay --scope swarm --opt encrypted --attachable cloud-public
+- export NODE_ID=$(docker info -f '{{.Swarm.NodeID}}')
+- docker node update --label-add cloud-public.traefik-certificates=true $NODE_ID
+- sudo apt update && sudo apt install -y apache2-utils
+- export DOMAIN="<domain here>"
+- export EMAIL="<email for letsencrypt certificates here>"
+- export WHITELIST_IP="<your public ip>/32"
+- export USERNAME="<username here>"
+- export TRAEFIK_ADMINS=$(htpasswd -nBC 10 $USERNAME)
