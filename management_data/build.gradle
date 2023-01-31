@@ -16,6 +16,7 @@ configurations {
 
 repositories {
 	mavenCentral()
+	maven 'https://jitpack.io'
 }
 
 dependencies {
@@ -29,6 +30,10 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	// use jpa
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	// scrapping
+	implementation 'org.seleniumhq.selenium:selenium-java'
+	//use komoran
+	implementation 'com.github.shin285:KOMORAN:3.3.4'
 
 	// annotation processor
 	annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
@@ -38,6 +43,8 @@ dependencies {
 //	}
 	implementation 'org.apache.shardingsphere:sharding-jdbc-core:4.1.1'
 //	implementation 'com.dangdang:sharding-jdbc-core:1.5.4.1'
+	implementation 'com.googlecode.json-simple:json-simple:1.1.1'
+
 }
 
 tasks.named('test') {
