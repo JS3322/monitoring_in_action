@@ -47,3 +47,8 @@
 - export WHITELIST_IP="<your public ip>/32"
 - export USERNAME="<username here>"
 - export TRAEFIK_ADMINS=$(htpasswd -nBC 10 $USERNAME)
+
+### example plan
+- Golang exporter
+- Docker swarm과 traefik
+- Kafka spring boot 예제
