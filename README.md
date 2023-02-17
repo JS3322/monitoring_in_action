@@ -6,22 +6,27 @@
 # outline
 
 ### db_info_exporter
-- use mariadb, go
+- use oracle21c, go
+- build a docker deployment
+- SOURCE : expected
 
 ### container_info_exporter
 - use traefik, docker swarm, prometheus
+- build a docker deployment
+- SOURCE : expected
 
 ### management_data
-- use springboot
+- use springboot or golang or python
 - create data processing load balancing logic based on input information
 - keep server management constant by passing commands through declarative API configuration
+- building a management system using chatGPT
+- build a docker deployment
+- SOURCE : expected 
 
 ### management_model
 - use sklearn
 - building a model to configure automatic server management: time series data pattern analysis
-
-### scraping_example
-- use selenium springboot
+- SOURCE : expected
 
 ---
 # diagram

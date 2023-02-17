@@ -11,7 +11,11 @@ import (
 //	Method_example()
 //}
 
-func main() {
+//func main() {
+//	os_info()
+//}
+
+func os_info() {
 	//basic log data
 	logFile := openLogFile()
 	defer logFile.Close()

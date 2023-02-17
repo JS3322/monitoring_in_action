@@ -13,7 +13,12 @@ func check_os() string {
 	result := "mac"
 	return result
 }
-func main() {
+
+//func main() {
+//	git_auto_start()
+//}
+
+func git_auto_start() {
 
 	var folder_name_list []string
 	targetDir := "/Users/js/Cleancode"

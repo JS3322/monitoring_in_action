@@ -6,7 +6,11 @@ import (
 	"syscall"
 )
 
-func main() {
+//func main()  {
+//	test()
+//}
+
+func test() {
 	var mem syscall.
 	err := syscall.Sysinfo(&mem)
 	if err != nil {
