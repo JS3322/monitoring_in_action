@@ -5,6 +5,10 @@
 ---
 # outline
 
+### pull_cluster_data
+- use Prometheus, kotlin
+- Control incoming information from the Kotlin language using the rancher tool
+
 ### db_info_exporter
 - use oracle21c, go
 - build a docker deployment
