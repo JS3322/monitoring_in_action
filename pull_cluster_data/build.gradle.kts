@@ -20,6 +20,7 @@ repositories {
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter")
+	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	implementation("io.ktor:ktor-client-core:1.6.0")
@@ -28,6 +29,12 @@ dependencies {
 	implementation("io.ktor:ktor-client-serialization:1.6.0")
 	implementation("io.ktor:ktor-client-serialization-jvm:1.6.0")
 	implementation("io.ktor:ktor-client-cio:1.6.0")
+
+	// use_prometheus_client
+	implementation("io.prometheus:simpleclient:0.16.0")
+	implementation("io.prometheus:simpleclient_httpserver:0.16.0")
+	implementation("io.prometheus:simpleclient_common:0.16.0")
+
 
 }
 
