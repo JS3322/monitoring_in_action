@@ -1,0 +1,10 @@
+# pip install -r requirements.txt
+
+
+# Base ----------------------------------------
+pyinstaller
+
+# Use ----------------------------------------
+# pyinstaller [PY_FILENAME]
+# pyinstaller -w [PY_FILENAME] #not view console window
+# pyinstaller -w -F [PY_FILENAME] #build one file
