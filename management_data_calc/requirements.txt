@@ -3,6 +3,7 @@
 
 # Base ----------------------------------------
 pyinstaller
+pymongo
 
 # Use ----------------------------------------
 # pyinstaller [PY_FILENAME]
