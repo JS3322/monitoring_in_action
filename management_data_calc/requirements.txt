@@ -4,6 +4,7 @@
 # Base ----------------------------------------
 pyinstaller
 pymongo
+pandas
 
 # Use ----------------------------------------
 # pyinstaller [PY_FILENAME]
