@@ -5,31 +5,32 @@
 ---
 # outline
 
-### pull_cluster_data
+### pull_cluster_data : 프로메테우스 데이터를 수집
 - use Prometheus, kotlin
 - Control incoming information from the Kotlin language using the rancher tool
 
-### db_info_exporter
+### management_data_calc : 수집된 데이터 기반 리소스 예측/ 제시 인공지능 모듈
+- use mongoDB, pyhon
+
+### (미개발) db_info_exporter: Pod Exporter
 - use oracle21c, go
 - build a docker deployment
 - SOURCE : expected
 
-### container_info_exporter
+### (미개발) management_broker
+- use docker controller
+
+### (미개발) container_info_exporter
 - use traefik, docker swarm, prometheus
 - build a docker deployment
 - SOURCE : expected
 
-### management_data
+### (미개발) management_data
 - use springboot or golang or python
 - create data processing load balancing logic based on input information
 - keep server management constant by passing commands through declarative API configuration
 - building a management system using chatGPT
 - build a docker deployment
-- SOURCE : expected 
-
-### management_model
-- use sklearn
-- building a model to configure automatic server management: time series data pattern analysis
 - SOURCE : expected
 
 ---
