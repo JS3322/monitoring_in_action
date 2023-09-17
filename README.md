@@ -5,6 +5,17 @@
 ---
 # outline
 
+### pull_data : Work
+- use python3.9
+- 데이터 정제 및 활용 예제
+
+### pull_api : Work
+- CURD 호출정보 관리 및 클라이언트 Log관리
+
+### pull_mongo
+- mongoDB 6.0.3
+- mongodb 데이터 수집 및 활용
+
 ### pull_cluster_data : 프로메테우스 데이터를 수집
 - use Prometheus, kotlin
 - Control incoming information from the Kotlin language using the rancher tool
